@@ -1,10 +1,14 @@
 package de.fh;
 
 import de.fh.agent.WumpusHunterAgent;
+import de.fh.wumpus.Hunter;
 import de.fh.wumpus.HunterPercept;
 import de.fh.wumpus.enums.HunterAction;
 import de.fh.wumpus.enums.HunterActionEffect;
+
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 
 /*
@@ -16,6 +20,11 @@ public class MyAgent extends WumpusHunterAgent {
 	HunterPercept percept;
 	HunterActionEffect actionEffect;
 	Hashtable<Integer, Integer> stenchRadar;
+
+	List<String> map = new ArrayList<String>();
+	int i,j = 0;
+	boolean goingDown,goingLeft,goingUp = false;
+	boolean goingRight = true;
 	
 	public static void main(String[] args) {
 
@@ -110,6 +119,7 @@ public class MyAgent extends WumpusHunterAgent {
 		*/
 
 		//Beispiel:
+		/*
 		stenchRadar = this.percept.getWumpusStenchRadar();
 
 		//Gebe alle riechbaren Wumpis aus
@@ -122,6 +132,7 @@ public class MyAgent extends WumpusHunterAgent {
 			System.out.println(g.getKey() + ":\t\t" + g.getValue() );
 		}
 		System.out.println("");
+*/
 
 
 	}
@@ -141,6 +152,7 @@ public class MyAgent extends WumpusHunterAgent {
 	@Override
 	public HunterAction action() {
 
+		String comparing = i-1 + "," + (j-1);
 		/*HunterAction
         Mögliche HunterActions sind möglich:
 
@@ -152,9 +164,56 @@ public class MyAgent extends WumpusHunterAgent {
 		HunterAction.GRAB
 		HunterAction.QUIT_GAME
 		*/
+		if(actionEffect == HunterActionEffect.GAME_INITIALIZED) {
+			nextAction = HunterAction.GO_FORWARD;
+			map.add(i+","+j);
+		}else
+		if(actionEffect == HunterActionEffect.BUMPED_INTO_WALL) {
+			nextAction = HunterAction.TURN_RIGHT;
+			checkBool();
+		}else
+		{
+			nextAction = HunterAction.GO_FORWARD;
+			for(int x = 0 ; x < map.size() ; x++){
+				if(map.get(x).equals(comparing)){
+					System.out.println("dsajfioewhjt0w3e4ijtr");
+				}
+			}
+			if(goingDown){
+				i++;
+			}
+			if(goingRight){
+				j++;
+			}
+			if(goingLeft){
+				j--;
+			}
+			if(goingUp){
+				i--;
+			}
 
-		nextAction = HunterAction.GO_FORWARD;
+			map.add(i+","+j);
+		}
+
+		for(int x = 0 ; x < map.size() ; x++){
+			System.out.println(map.get(x));
+		}
 		System.out.println("nextAction: "+nextAction);
 		return nextAction;
+	}
+	public void checkBool(){
+		if(goingRight){
+			goingRight = false;
+			goingDown = true;
+		}else if(goingDown){
+			goingDown = false;
+			goingLeft = true;
+		} else if (goingLeft) {
+			goingLeft = false;
+			goingUp = true;
+		}else if(goingUp){
+			goingUp = false;
+			goingRight = true;
+		}
 	}
 }
