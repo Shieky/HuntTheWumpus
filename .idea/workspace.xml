@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6849dd15-1326-41e4-af38-26d07313f710" name="Default Changelist" comment="Einfach mal schauen... paar bools gemacht das wars" />
+    <list default="true" id="6849dd15-1326-41e4-af38-26d07313f710" name="Default Changelist" comment="Einfach mal schauen... paar bools gemacht das wars">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/de/fh/MyAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/de/fh/MyAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/fh/MyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/fh/MyAgent.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,45 +19,45 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
+          <entry key="class" value="14" />
           <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
+          <entry key="CLASS" value="14" />
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2258" />
+          <entry key="java" value="4278" />
           <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2258" />
+          <entry key="JAVA" value="4278" />
           <entry key="PLAIN_TEXT" value="54" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/fh/MyAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+            <state relative-caret-position="274">
+              <caret line="207" column="37" lean-forward="true" selection-start-line="207" selection-start-column="37" selection-end-line="207" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#616#624#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +87,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,16 +107,28 @@
             </path>
             <path>
               <item name="WUMPUS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WUMPUS" type="462c0819:PsiDirectoryNode" />
+              <item name="Server.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="WUMPUS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WUMPUS" type="462c0819:PsiDirectoryNode" />
+              <item name="Server.jar" type="ab9368bb:PsiFileNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WUMPUS" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544469319223" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544707758699" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -179,33 +194,34 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.186407" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18799682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.329653" />
-      <window_info anchor="bottom" id="Messages" weight="0.34148264" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23580442" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39984226" />
+      <window_info anchor="bottom" x="3222" y="126" width="1255" height="810" id="Run" order="2" sideWeight="0.49880764" type="FLOATING" weight="0.23580442" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920508" visible="true" weight="0.39984226" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329653" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.39984226" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49960256" weight="0.34148264" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -243,16 +259,23 @@
     <MESSAGE value="Einfach mal schauen... paar bools gemacht das wars" />
     <option name="LAST_COMMIT_MESSAGE" value="Einfach mal schauen... paar bools gemacht das wars" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/de/fh/MyAgent.java</url>
+          <line>175</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/client/ConnectionProxy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -263,13 +286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/agent/WumpusHunterAgent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/agent/Agent.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
@@ -277,13 +293,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/game/fov/FOV.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7990">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/game/Tile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/game/Level.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="e#2770#2771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Server.jar!/de/fh/agent/WumpusHunterAgent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/fh/MyAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        <state relative-caret-position="274">
+          <caret line="207" column="37" lean-forward="true" selection-start-line="207" selection-start-column="37" selection-end-line="207" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#616#624#0" expanded="true" />
           </folding>
         </state>
       </provider>

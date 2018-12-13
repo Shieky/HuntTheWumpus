@@ -1,15 +1,18 @@
 package de.fh;
 
 import de.fh.agent.WumpusHunterAgent;
+import de.fh.game.Entity;
+import de.fh.game.Level;
+import de.fh.game.Tile;
 import de.fh.wumpus.Hunter;
 import de.fh.wumpus.HunterPercept;
+import de.fh.wumpus.Wumpus;
 import de.fh.wumpus.enums.HunterAction;
 import de.fh.wumpus.enums.HunterActionEffect;
+import de.fh.wumpus.enums.WumpusTileType;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
 
 /*
  * DIESE KLASSE VERÄNDERN SIE BITTE NUR AN DEN GEKENNZEICHNETEN STELLEN
@@ -21,17 +24,14 @@ public class MyAgent extends WumpusHunterAgent {
 	HunterActionEffect actionEffect;
 	Hashtable<Integer, Integer> stenchRadar;
 
-	List<String> map = new ArrayList<String>();
-	int i,j = 0;
-	boolean goingDown,goingLeft,goingUp = false;
-	boolean goingRight = true;
-	
 	public static void main(String[] args) {
 
 		MyAgent agent = new MyAgent("");
 		MyAgent.start(agent,"127.0.0.1", 5000);
 	}
-
+	public int x,y = 1;
+	public String[][] map = new String[15][15];
+	Entity.Direction richtung = Entity.Direction.EAST;
 	public MyAgent(String name) {
 
 		super(name);
@@ -152,7 +152,6 @@ public class MyAgent extends WumpusHunterAgent {
 	@Override
 	public HunterAction action() {
 
-		String comparing = i-1 + "," + (j-1);
 		/*HunterAction
         Mögliche HunterActions sind möglich:
 
@@ -164,56 +163,92 @@ public class MyAgent extends WumpusHunterAgent {
 		HunterAction.GRAB
 		HunterAction.QUIT_GAME
 		*/
+
 		if(actionEffect == HunterActionEffect.GAME_INITIALIZED) {
-			nextAction = HunterAction.GO_FORWARD;
-			map.add(i+","+j);
-		}else
-		if(actionEffect == HunterActionEffect.BUMPED_INTO_WALL) {
-			nextAction = HunterAction.TURN_RIGHT;
-			checkBool();
-		}else
-		{
-			nextAction = HunterAction.GO_FORWARD;
-			for(int x = 0 ; x < map.size() ; x++){
-				if(map.get(x).equals(comparing)){
-					System.out.println("dsajfioewhjt0w3e4ijtr");
+			for (int i = 0 ; i < map.length; i++) {
+				for (int j = 0; j < map[i].length; j++) {
+					System.out.print(map[i][j] = "X");
 				}
 			}
-			if(goingDown){
-				i++;
+			nextAction = HunterAction.GO_FORWARD;
+		}else{
+			if(richtung == Entity.Direction.EAST){
+				if(map[x+1][y].equals("O")){
+					nextAction = HunterAction.TURN_RIGHT;
+					switchRichtung();
+				}
+				else{
+					nextAction = HunterAction.GO_FORWARD;
+					FillArray();
+				}
+			}else
+			if(richtung == Entity.Direction.SOUTH){
+				if(map[x][y+1].equals("O")){
+					nextAction = HunterAction.TURN_RIGHT;
+					switchRichtung();
+				}
+				else{
+					nextAction = HunterAction.GO_FORWARD;
+					FillArray();
+				}
+			}else
+			if(richtung == Entity.Direction.WEST){
+				if(map[x-1][y].equals("O")){
+					nextAction = HunterAction.TURN_RIGHT;
+					switchRichtung();
+				}
+				else{
+					nextAction = HunterAction.GO_FORWARD;
+					FillArray();
+				}
+			}else
+			if(richtung == Entity.Direction.NORTH){
+				if(map[x][y-1].equals("O")){
+					nextAction = HunterAction.TURN_RIGHT;
+					switchRichtung();
+				}
+				else{
+					nextAction = HunterAction.GO_FORWARD;
+					FillArray();
+				}
 			}
-			if(goingRight){
-				j++;
-			}
-			if(goingLeft){
-				j--;
-			}
-			if(goingUp){
-				i--;
 			}
 
-			map.add(i+","+j);
+		if(actionEffect == HunterActionEffect.BUMPED_INTO_WALL){
+			nextAction = HunterAction.TURN_RIGHT;
+			// wäre theoretisch bei rechts-> NESW und bei links -> NWSE
+			switchRichtung();
 		}
 
-		for(int x = 0 ; x < map.size() ; x++){
-			System.out.println(map.get(x));
-		}
+
+
+
+
 		System.out.println("nextAction: "+nextAction);
+
+		System.out.println("X: " + x + " Y: " +y);
 		return nextAction;
 	}
-	public void checkBool(){
-		if(goingRight){
-			goingRight = false;
-			goingDown = true;
-		}else if(goingDown){
-			goingDown = false;
-			goingLeft = true;
-		} else if (goingLeft) {
-			goingLeft = false;
-			goingUp = true;
-		}else if(goingUp){
-			goingUp = false;
-			goingRight = true;
+	public void FillArray(){
+		switch (richtung){
+			case EAST: if(x != 13)x++ ; map[x][y] = "O"; break;
+			case SOUTH: if(y != 13)y++ ; map[x][y] = "O" ; break;
+			case WEST: if(x !=1 )x-- ; map[x][y] = "O"; break;
+			case NORTH: if(y !=1)y--; map[x][y] = "O"; break;
+		}
+		for (int i = 0 ; i < map.length; i++){
+			for (int j = 0 ; j < map[i].length; j++){
+				System.out.print(map[i][j]);
+			}
+			System.out.println();
+		}
+	}
+	public void switchRichtung(){
+		switch (richtung){
+			case EAST: richtung = Entity.Direction.SOUTH; break;
+			case SOUTH: richtung = Entity.Direction.WEST;break;
+			case WEST: richtung = Entity.Direction.NORTH;break;
+			case NORTH: richtung = Entity.Direction.EAST;break;
 		}
 	}
 }
